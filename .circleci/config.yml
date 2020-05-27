@@ -23,6 +23,7 @@ jobs:
       - image: circleci/php:7.1-node-browsers
     steps:
       - checkout
+      - run: composer require --dev php-parallel-lint/php-parallel-lint
       - run: composer require --dev php-parallel-lint/php-console-highlighter
       - run: find . -name parallel-lint
 
