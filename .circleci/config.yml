@@ -18,9 +18,25 @@ jobs:
           paths:
             - ./vendor
 
+  php-lint:
+      - run: pwd
+      - run: ls -lR .
+
+  deploy:
+      - run: echo "OK Deploy"
+
 workflows:
   version: 2
   build:
     jobs:
+      - php-lint
       - build
+          requires:
+            - php-lint
+      - deploy
+          requires:
+            - build 
+          filters:
+            branches:
+              only: [ master ]
     
