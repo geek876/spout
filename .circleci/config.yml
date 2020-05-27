@@ -23,7 +23,7 @@ jobs:
       - image: circleci/php:7.1-node-browsers
     steps:
       - checkout
-      - run: ./circleci/php_lint.sh
+      - run: ./.circleci/php_lint.sh
 
   deploy:
     docker:
