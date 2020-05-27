@@ -23,8 +23,9 @@ jobs:
       - image: circleci/php:7.1-node-browsers
     steps:
       - checkout
-      - run: composer require --dev jakub-onderka/php-console-highlighter
-      - run: vendor/bin/parallel-lint ./src
+      - run: composer require --dev php-parallel-lint/php-console-highlighter
+      - run: find . -type d -name vendor -print
+
 
   deploy:
     docker:
