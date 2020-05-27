@@ -19,10 +19,16 @@ jobs:
             - ./vendor
 
   php-lint:
+    docker:
+      - image: circleci/php:7.1-node-browsers
+    steps:
       - run: pwd
       - run: ls -lR .
 
   deploy:
+    docker:
+      - image: circleci/php:7.1-node-browsers
+    steps:
       - run: echo "OK Deploy"
 
 workflows:
