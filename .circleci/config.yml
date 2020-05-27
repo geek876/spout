@@ -30,10 +30,10 @@ workflows:
   build:
     jobs:
       - php-lint
-      - build
+      - build:
           requires:
             - php-lint
-      - deploy
+      - deploy:
           requires:
             - build 
           filters:
