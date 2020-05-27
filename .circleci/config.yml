@@ -25,7 +25,7 @@ jobs:
       - checkout
       - run: composer require --dev php-parallel-lint/php-parallel-lint
       - run: composer require --dev php-parallel-lint/php-console-highlighter
-      - run: find . -name parallel-lint
+      - run: ./vendor/bin/parallel-lint ./src
 
 
   deploy:
