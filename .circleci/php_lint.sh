@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x 
 
 php_lint_file()
 {
