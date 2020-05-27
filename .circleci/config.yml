@@ -24,7 +24,7 @@ jobs:
     steps:
       - checkout
       - run: composer require --dev jakub-onderka/php-console-highlighter
-      - run: parallel-lint ./src
+      - run: vendor/bin/parallel-lint ./src
 
   deploy:
     docker:
