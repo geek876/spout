@@ -25,6 +25,7 @@ jobs:
       - checkout
       - run: composer require --dev php-parallel-lint/php-console-highlighter
       - run: find . -type d -name vendor -print
+      - run: ls ./vendor/bin
 
 
   deploy:
